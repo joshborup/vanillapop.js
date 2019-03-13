@@ -64,8 +64,11 @@ function popUp(settings, message) {
     let buttonText = document.createTextNode("X");
     let closeButton = document.createElement("button");
 
-    // add button text and functionality
     closeButton.addEventListener("click", function() {
+      popUp(null, null);
+    });
+
+    fadedBackground.addEventListener("click", function() {
       popUp(null, null);
     });
     closeButton.appendChild(buttonText);
